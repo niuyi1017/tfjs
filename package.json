@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/niuyi1017/tfjs#readme",
   "dependencies": {
-    "@tensorflow/tfjs": "^1.5.2"
-  }
+    "@tensorflow/tfjs": "^1.5.2",
+    "@tensorflow/tfjs-vis": "^1.4.0"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
