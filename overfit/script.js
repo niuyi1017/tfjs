@@ -5,4 +5,7 @@ import { getData } from "../xor/data"
 
 window.onload = async () => {
   
+
+
+  
 }
