@@ -1,5 +1,5 @@
 import * as tfvis  from '@tensorflow/tfjs-vis'
-import { getInputs } from './data'
+import { getInputs } from './data.js'
 
 window.onload = async () => {
   const { inputs, labels } = await getInputs()
