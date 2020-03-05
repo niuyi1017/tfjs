@@ -60,7 +60,7 @@ window.onload = async () => {
       alert(`预测结果是 ${BRAND_CLASSES[index]}`)
     },0)
   }
-  window.download = async () => {
+  window.download = async () => { 
     await model.save('downloads://model')
   }
 
