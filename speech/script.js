@@ -1,4 +1,3 @@
-// import * as tf from "@tensorflow/tfjs"
 import * as speechCommands from '@tensorflow-models/speech-commands'
 const MODEL_PATH = 'http://127.0.0.1:8080/speech'
 window.onload = async () => {
@@ -26,6 +25,5 @@ window.onload = async () => {
     {
       overlapFactor: 0.3,
       probabilityThreshold: 0.9
-      
     })
 }
