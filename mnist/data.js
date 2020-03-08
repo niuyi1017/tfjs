@@ -27,9 +27,11 @@ const NUM_TRAIN_ELEMENTS = Math.floor(TRAIN_TEST_RATIO * NUM_DATASET_ELEMENTS);
 const NUM_TEST_ELEMENTS = NUM_DATASET_ELEMENTS - NUM_TRAIN_ELEMENTS;
 
 const MNIST_IMAGES_SPRITE_PATH =
-  'http://127.0.0.1:8080/mnist/mnist_images.png';
+  'http://imooc.niuy.xyz/tfjs/data/mnist/mnist_images.png';
+  // 'http://127.0.0.1:8080/mnist/mnist_images.png';
 const MNIST_LABELS_PATH =
-  'http://127.0.0.1:8080/mnist/mnist_labels_uint8';
+  'http://imooc.niuy.xyz/tfjs/data/mnist/mnist_labels_uint8';
+  // 'http://127.0.0.1:8080/mnist/mnist_labels_uint8';
 
 /**
  * A class that fetches the sprited MNIST dataset and returns shuffled batches.
