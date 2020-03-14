@@ -1,7 +1,9 @@
 import * as tf  from '@tensorflow/tfjs'
 import { img2x, file2img } from './utils.js'
 
-const MOBILENET_MODEL_PATH = 'http://127.0.0.1:8080/mobilenet/web_model/model.json'
+// const MOBILENET_MODEL_PATH = 'http://127.0.0.1:8080/mobilenet/web_model/model.json'
+// /brand/web_model/model.json
+const MOBILENET_MODEL_PATH = 'http://imooc.niuy.xyz/tfjs/data/mobilenet/web_model/model.json'
 const NUM_CLASSES = 3
 const BRAND_CLASSES = ['android', 'apple','windows']
 

@@ -16,12 +16,13 @@ export const getInputs = async () => {
   const labels = []
   for (let i = 0; i < 29; i++){
     ['android', 'apple', 'windows'].forEach(label => {
-      const imgP = loadImg(`http://127.0.0.1:8080/brand/train/${label}-${i}.jpg`)
+      const imgP = loadImg(`http://imooc.niuy.xyz/tfjs/data/brand/train/${label}-${i}.jpg`)
+      // const imgP = loadImg(`http://imooc.niuy.xyz/tfjs/data/brand/train/${label}-${i}.jpg`)
       loadImgs.push(imgP)
       labels.push([
         label === 'android' ? 1 : 0,
         label === 'apple' ? 1 : 0,
-        label === 'window' ? 1 : 0
+        label === 'windows' ? 1 : 0
       ])
     })
   }

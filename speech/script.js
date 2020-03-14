@@ -1,5 +1,6 @@
 import * as speechCommands from '@tensorflow-models/speech-commands'
-const MODEL_PATH = 'http://127.0.0.1:8080/speech'
+// const MODEL_PATH = 'http://127.0.0.1:8080/speech'
+const MODEL_PATH = 'http://imooc.niuy.xyz/tfjs/data/speech'
 window.onload = async () => {
   const recognizer = speechCommands.create(
     'BROWSER_FFT',
