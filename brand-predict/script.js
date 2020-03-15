@@ -15,6 +15,7 @@ window.onload = async () => {
   })
   
   const model = await tf.loadLayersModel(MODEL_PATH + '/brand/web_model/model.json')
+  // const model = await tf.loadLayersModel('http://127.0.0.1:8080/brand/web_model/model.json')
   window.predict = async (file) => {
     const img = await file2img(file)
     document.body.appendChild(img)
