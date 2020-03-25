@@ -11,7 +11,6 @@ window.onload = async () => {
   )
   await recognizer.ensureModelLoaded()
   transferRecognizer = recognizer.createTransfer("轮播图")
-
 }
 window.collect = async (btn) => {
   btn.disabled = true
