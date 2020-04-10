@@ -39,3 +39,6 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    # 打包根据dockerfile创建镜像并上传到dockerhub  
+    # ssh登录云服务器拉取镜像重启容器
