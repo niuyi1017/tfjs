@@ -49,6 +49,6 @@ jobs:
         access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
 
     - name: Deply To OSS
-      run: ossutil cp public oss://tfjs/ -rf
+      run: ossutil cp build oss://tfjs/ -rf
     # 打包根据dockerfile创建镜像并上传到dockerhub  
     # ssh登录云服务器拉取镜像重启容器
