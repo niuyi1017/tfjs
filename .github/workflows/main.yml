@@ -6,9 +6,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ production ]
   pull_request:
-    branches: [ master ]
+    branches: [ production ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,10 +35,20 @@ jobs:
     #   run: npm run build
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    # - name: Run a multi-line script
+    #   run: |
+    #     echo Add other actions to build,
+    #     echo test, and deploy your project.
 
+      - uses: manyuanrong/setup-ossutil@v1.0
+      with:
+        # endpoint 可以去oss控制台上查看
+        endpoint: "oss-cn-qingdao.aliyuncs.com"
+        # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
+        access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+        access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+
+      - name: Deply To OSS
+        run: ossutil cp public oss://tfjs/ -rf
     # 打包根据dockerfile创建镜像并上传到dockerhub  
     # ssh登录云服务器拉取镜像重启容器
