@@ -40,7 +40,7 @@ jobs:
     #     echo Add other actions to build,
     #     echo test, and deploy your project.
 
-      - uses: manyuanrong/setup-ossutil@v1.0
+    - uses: manyuanrong/setup-ossutil@v1.0
       with:
         # endpoint 可以去oss控制台上查看
         endpoint: "oss-cn-qingdao.aliyuncs.com"
@@ -48,7 +48,7 @@ jobs:
         access-key-id: ${{ secrets.ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
 
-      - name: Deply To OSS
-        run: ossutil cp public oss://tfjs/ -rf
+    - name: Deply To OSS
+      run: ossutil cp public oss://tfjs/ -rf
     # 打包根据dockerfile创建镜像并上传到dockerhub  
     # ssh登录云服务器拉取镜像重启容器
